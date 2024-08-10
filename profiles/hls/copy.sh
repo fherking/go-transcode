@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec ffmpeg -hide_banner -loglevel warning \
+/run/current-system/sw/bin/ffmpeg ffmpeg -hide_banner -loglevel warning \
   -i "${1}" \
   -map 0:v:0 -map 0:a:0 \
   -c:a copy \
