@@ -91,8 +91,7 @@ func TranscodeSegments(ctx context.Context, ffmpegBinary string, config Transcod
 
 		args = append(args, []string{
 			"-vf", scale,
-			"-c:v", "libx264",
-			"-preset", "faster",
+			"-c:v", "h264_nvenc",
 			"-profile:v", "high",
 			"-level:v", "4.0",
 			"-b:v", fmt.Sprintf("%dk", profile.Bitrate),
