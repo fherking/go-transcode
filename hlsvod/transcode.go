@@ -104,6 +104,7 @@ func TranscodeSegments(ctx context.Context, ffmpegBinary string, config Transcod
 
 		args = append(args, []string{
 			"-c:a", "aac",
+      "-ac","2",
 			"-b:a", fmt.Sprintf("%dk", profile.Bitrate),
 		}...)
 	}
