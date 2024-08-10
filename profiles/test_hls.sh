@@ -1,6 +1,6 @@
 #!/bin/sh
 
-exec ffmpeg \
+/run/current-system/sw/bin/ffmpeg  \
   -re -r 30 \
   -f lavfi -i testsrc \
   -vf scale=1280:960 \
