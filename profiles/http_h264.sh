@@ -18,7 +18,7 @@ if [ -z "$CV" ] || [ -z "$VF" ]; then
   CV="h264"
 fi
 
-exec ffmpeg -hide_banner -loglevel warning \
+exec /run/current-system/sw/bin/ffmpeg -hide_banner -loglevel warning \
   $EXTRAPARAMS \
   -i "$INPUT" \
   -vf $VF \
